@@ -1,6 +1,6 @@
 /* src/styles/index.css */
-@import './tokens.css';
-@import './animations.css';
+@import "./tokens.css";
+@import "./animations.css";
 
 @tailwind base;
 @tailwind components;
@@ -15,37 +15,60 @@ body {
   margin: 0;
   background-color: var(--bg-base);
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typography */
-h1, h2, h3, h4 {
-  font-family: 'JetBrains Mono', monospace;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "JetBrains Mono", monospace;
   margin: 0;
   line-height: 1.2;
 }
 
-h1 { font-size: 3rem; font-weight: 700; }
-h2 { font-size: 2.25rem; font-weight: 600; }
-h3 { font-size: 1.5rem; font-weight: 600; }
-h4 { font-size: 1.125rem; font-weight: 500; }
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
 
 @media (min-width: 768px) {
-  h1 { font-size: 4rem; }
-  h2 { font-size: 2.75rem; }
-  h3 { font-size: 1.75rem; }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.75rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  h1 { font-size: 4.5rem; }
+  h1 {
+    font-size: 4.5rem;
+  }
 }
 
 /* Eyebrow label */
 .eyebrow {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 500;
   font-size: 0.875rem;
   text-transform: uppercase;
@@ -56,7 +79,7 @@ h4 { font-size: 1.125rem; font-weight: 500; }
 
 /* Brand name */
 .brand {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--text-primary);
@@ -87,7 +110,7 @@ button {
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   background: var(--accent-gradient);
-  color: #172B36;
+  color: #172b36;
   font-weight: 600;
   border-radius: 8px;
   font-size: 1rem;
@@ -95,7 +118,9 @@ button {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--accent-glow), 0 0 0 1px var(--border-accent);
+  box-shadow:
+    0 8px 24px var(--accent-glow),
+    0 0 0 1px var(--border-accent);
 }
 
 .btn-primary:active {
@@ -114,7 +139,9 @@ button {
   border-radius: 8px;
   border: 1px solid var(--border-strong);
   font-size: 1rem;
-  transition: border-color 200ms ease, background-color 200ms ease;
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease;
 }
 
 .btn-ghost:hover {
@@ -172,7 +199,7 @@ section {
 }
 
 /* Navigation */
- nav {
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -228,7 +255,9 @@ section {
   height: 40px;
   border-radius: 8px;
   color: var(--text-secondary);
-  transition: background-color 200ms ease, color 200ms ease;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
 }
 
 .icon-btn:hover {
@@ -586,7 +615,7 @@ section {
   display: inline-block;
   padding: 0.125rem 0.5rem;
   background: var(--accent);
-  color: #172B36;
+  color: #172b36;
   font-size: 0.75rem;
   font-weight: 600;
   border-radius: 4px;
@@ -642,7 +671,7 @@ section {
   transform: translateX(-50%);
   padding: 0.375rem 1rem;
   background: var(--accent-gradient);
-  color: #172B36;
+  color: #172b36;
   font-size: 0.75rem;
   font-weight: 600;
   border-radius: 20px;
@@ -667,14 +696,14 @@ section {
 }
 
 .price-symbol {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--text-primary);
 }
 
 .price-amount {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 3rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -730,7 +759,7 @@ section {
 
 .cta-primary {
   background: var(--accent-gradient);
-  color: #172B36;
+  color: #172b36;
 }
 
 .cta-secondary {
@@ -774,7 +803,7 @@ section {
 
 .stat-number {
   display: block;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -826,7 +855,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   color: var(--accent);
 }
@@ -864,7 +893,9 @@ section {
   background: var(--bg-surface-2);
   border: 1px solid var(--border);
   color: var(--text-primary);
-  transition: border-color 200ms ease, background-color 200ms ease;
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease;
 }
 
 .carousel-controls button:hover {
@@ -942,6 +973,69 @@ section {
   border-color: var(--accent);
 }
 
+.cta-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .cta-input-group {
+    flex-direction: row;
+  }
+}
+
+.cta-input-group input {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.cta-input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.cta-input-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.cta-input-group input[aria-invalid="true"] {
+  border-color: var(--accent-warm);
+}
+
+.cta-success {
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-accent);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 0 auto;
+  max-width: 480px;
+  color: var(--text-primary);
+}
+
+.cta-success-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.cta-success-text strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cta-error-text {
+  color: var(--accent-warm);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
 /* Footer */
 footer {
   background: var(--bg-surface);
@@ -978,13 +1072,19 @@ footer {
   margin-top: 0.5rem;
 }
 
-.footer-grid nav h4 {
+.footer-grid nav h4,
+.footer-social h4 {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-grid nav ul {
@@ -1028,7 +1128,9 @@ footer {
   background: var(--bg-surface-2);
   border: 1px solid var(--border);
   color: var(--accent);
-  transition: border-color 200ms ease, background-color 200ms ease;
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease;
 }
 
 .social-links a:hover {
@@ -1079,7 +1181,9 @@ footer {
   background: var(--bg-surface-2);
   border: 1px solid var(--border);
   color: var(--accent);
-  transition: border-color 200ms ease, background-color 200ms ease;
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease;
 }
 
 .scroll-top-btn:hover {

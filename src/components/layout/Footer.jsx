@@ -1,5 +1,5 @@
 // src/components/layout/Footer.jsx
-import { LinkIcon, LinkSolidIcon, ChevronUpIcon } from '../icons';
+import { LinkIcon, LinkSolidIcon, ChevronUpIcon } from "../icons";
 
 export default function Footer() {
   return (
@@ -12,10 +12,18 @@ export default function Footer() {
         <nav aria-label="Product links">
           <h4>Product</h4>
           <ul role="list">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#pricing">Pricing</a></li>
             <li>
-              <a href="https://docs.axon.ai" target="_blank" rel="noopener noreferrer">
+              <a href="#features">Features</a>
+            </li>
+            <li>
+              <a href="#pricing">Pricing</a>
+            </li>
+            <li>
+              <a
+                href="https://docs.axon.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Docs <LinkIcon size={14} aria-label="Opens in new tab" />
               </a>
             </li>
@@ -24,10 +32,18 @@ export default function Footer() {
         <nav aria-label="Company links">
           <h4>Company</h4>
           <ul role="list">
-            <li><a href="#about">About</a></li>
-            <li><a href="#blog">Blog</a></li>
             <li>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#blog">Blog</a>
+            </li>
+            <li>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub <LinkIcon size={14} aria-label="Opens in new tab" />
               </a>
             </li>
@@ -46,7 +62,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2025 Axon AI. All rights reserved.</p>
+        <p>&copy; 2026 Axon AI. All rights reserved.</p>
         <nav aria-label="Legal">
           <a href="#privacy">Privacy</a>
           <a href="#terms">Terms</a>
@@ -54,7 +70,7 @@ export default function Footer() {
         <button
           className="scroll-top-btn"
           aria-label="Scroll to top"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <ChevronUpIcon size={20} aria-label="Back to top" />
         </button>
