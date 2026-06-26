@@ -62,7 +62,11 @@ export default function Footer() {
         <div className="footer-social">
           <h4>Connect</h4>
           <div className="social-links">
-            <a href="#twitter" aria-label="Twitter">
+            <a
+              href="mailto:saladisubrahmanyam6@gmail.com"
+              target="_blank"
+              aria-label="Twitter"
+            >
               <LinkSolidIcon size={18} aria-label="Twitter profile" />
             </a>
             <a
