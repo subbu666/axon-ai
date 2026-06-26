@@ -1,63 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Primary SEO -->
-  <title>Axon AI - Intelligent Workflow Automation Platform</title>
-  <meta name="description"
-    content="Axon AI automates complex workflows with intelligent agents. Cut manual operations by 90%. Start free in 5 minutes." />
-  <meta name="keywords"
-    content="AI automation, workflow orchestration, intelligent agents, API automation, SaaS" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://axon-ai.vercel.app/" />
-  <meta name="author" content="Axon AI" />
+    <!-- Primary SEO -->
+    <title>Axon AI - Intelligent Workflow Automation Platform</title>
+    <meta
+      name="description"
+      content="Axon AI automates complex workflows with intelligent agents. Cut manual operations by 90%. Start free in 5 minutes."
+    />
+    <meta
+      name="keywords"
+      content="AI automation, workflow orchestration, intelligent agents, API automation, SaaS"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://axon-ai-orpin.vercel.app/" />
+    <meta name="author" content="Axon AI" />
 
-  <!-- Open Graph -->
-  <meta property="og:type"         content="website" />
-  <meta property="og:url"          content="https://axon-ai.vercel.app/" />
-  <meta property="og:title"        content="Axon AI — Intelligent Workflow Automation" />
-  <meta property="og:description"  content="Automate everything. Ship faster. Axon AI orchestrates your workflows with intelligent agents." />
-  <meta property="og:image"        content="/og-image.png" />
-  <meta property="og:image:width"  content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt"    content="Axon AI platform dashboard" />
-  <meta property="og:locale"       content="en_US" />
-  <meta property="og:site_name"    content="Axon AI" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://axon-ai-orpin.vercel.app/" />
+    <meta
+      property="og:title"
+      content="Axon AI — Intelligent Workflow Automation"
+    />
+    <meta
+      property="og:description"
+      content="Automate everything. Ship faster. Axon AI orchestrates your workflows with intelligent agents."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Axon AI platform dashboard" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Axon AI" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:site"        content="@axon_ai" />
-  <meta name="twitter:title"       content="Axon AI — AI Automation Platform" />
-  <meta name="twitter:description" content="Automate complex workflows with intelligent agents." />
-  <meta name="twitter:image"       content="/og-image.png" />
-  <meta name="twitter:image:alt"   content="Axon AI platform" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@axon_ai" />
+    <meta name="twitter:title" content="Axon AI — AI Automation Platform" />
+    <meta
+      name="twitter:description"
+      content="Automate complex workflows with intelligent agents."
+    />
+    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:image:alt" content="Axon AI platform" />
 
-  <!-- Performance: preconnect before font load -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+    <!-- Performance: preconnect before font load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <!-- Theme init: prevent FOUC — must be inline before body renders -->
-  <script>
-    (function() {
-      const t = localStorage.getItem('axon-theme') ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', t);
-    })();
-  </script>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <!-- Theme init: prevent FOUC — must be inline before body renders -->
+    <script>
+      (function () {
+        const t =
+          localStorage.getItem("axon-theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
