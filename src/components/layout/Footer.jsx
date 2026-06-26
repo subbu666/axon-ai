@@ -33,10 +33,18 @@ export default function Footer() {
           <h4>Company</h4>
           <ul role="list">
             <li>
-              <a href="#about">About</a>
+              <a
+                href="https://github.com/subbu666/axon-ai/blob/main/README.md"
+                target="_blank"
+              >
+                About
+              </a>
             </li>
             <li>
-              <a href="https://github.com/subbu666/axon-ai/blob/main/README.md">
+              <a
+                href="https://github.com/subbu666/axon-ai/blob/main/README.md"
+                target="_blank"
+              >
                 Blog
               </a>
             </li>
@@ -57,7 +65,11 @@ export default function Footer() {
             <a href="#twitter" aria-label="Twitter">
               <LinkSolidIcon size={18} aria-label="Twitter profile" />
             </a>
-            <a href="#linkedin" aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/saladi-subrahmanyam/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
               <LinkSolidIcon size={18} aria-label="LinkedIn profile" />
             </a>
           </div>
@@ -66,8 +78,18 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>&copy; 2026 Axon AI. All rights reserved.</p>
         <nav aria-label="Legal">
-          <a href="#privacy">Privacy</a>
-          <a href="#terms">Terms</a>
+          <a
+            href="https://github.com/subbu666/axon-ai/blob/main/README.md"
+            target="_blank"
+          >
+            Privacy
+          </a>
+          <a
+            href="https://github.com/subbu666/axon-ai/blob/main/README.md"
+            target="_blank"
+          >
+            Terms
+          </a>
         </nav>
         <button
           className="scroll-top-btn"
