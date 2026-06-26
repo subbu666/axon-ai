@@ -1,0 +1,49 @@
+/* src/styles/tokens.css */
+
+:root[data-theme="dark"] {
+  --bg-base:          #172B36;   /* Oceanic Noir — page canvas */
+  --bg-surface:       #114C5A;   /* Nocturnal Expedition — card backgrounds */
+  --bg-surface-2:     #1a3a47;   /* Slightly lighter surface for nested cards */
+  --text-primary:     #F1F6F4;   /* Arctic Powder — main text */
+  --text-secondary:   #D9E8E2;   /* Mystic Mint — supporting text */
+  --text-muted:       #7aa3b0;   /* Muted teal — captions, placeholders */
+  --accent:           #FFC801;   /* Forsythia — primary interactive accent */
+  --accent-warm:      #FF9932;   /* Deep Saffron — gradient partner, hover states */
+  --accent-gradient:  linear-gradient(135deg, #FFC801, #FF9932);
+  --accent-glow:      rgba(255, 200, 1, 0.14);
+  --accent-glow-warm: rgba(255, 153, 50, 0.12);
+  --border:           rgba(209, 232, 226, 0.10);
+  --border-strong:    rgba(209, 232, 226, 0.20);
+  --border-accent:    rgba(255, 200, 1, 0.28);
+}
+
+:root[data-theme="light"] {
+  --bg-base:          #F1F6F4;   /* Arctic Powder — page canvas */
+  --bg-surface:       #D9E8E2;   /* Mystic Mint — card backgrounds */
+  --bg-surface-2:     #ffffff;   /* Pure white for elevated cards */
+  --text-primary:     #172B36;   /* Oceanic Noir — main text */
+  --text-secondary:   #114C5A;   /* Nocturnal — supporting text */
+  --text-muted:       #5a7a87;   /* Muted teal */
+  --accent:           #FF9932;   /* Deep Saffron — primary accent in light mode */
+  --accent-warm:      #FFC801;   /* Forsythia — secondary warm */
+  --accent-gradient:  linear-gradient(135deg, #FF9932, #FFC801);
+  --accent-glow:      rgba(255, 153, 50, 0.12);
+  --accent-glow-warm: rgba(255, 200, 1, 0.10);
+  --border:           rgba(23, 43, 54, 0.10);
+  --border-strong:    rgba(23, 43, 54, 0.20);
+  --border-accent:    rgba(255, 153, 50, 0.35);
+}
+
+/* Global theme transition — smooth, no flicker */
+*, *::before, *::after {
+  transition:
+    background-color 280ms ease-in-out,
+    color 200ms ease-in-out,
+    border-color 200ms ease-in-out,
+    box-shadow 200ms ease-in-out;
+}
+
+/* Exception: never transition transforms (breaks animations) */
+[class*="animate-"], [class*="transition-transform"] {
+  transition: transform 0ms !important;
+}

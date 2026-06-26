@@ -1,0 +1,186 @@
+/* src/styles/animations.css */
+
+/* ── Timing tokens ── */
+:root {
+  --dur-micro:   160ms;
+  --dur-layout:  350ms;
+  --dur-entry:   380ms;
+  --ease-out:    cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-inout:  cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Hero word entrance — staggered */
+@keyframes word-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  animation: word-enter var(--dur-entry) var(--ease-out) forwards;
+  will-change: transform, opacity;
+}
+
+/* Scroll reveal */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity   var(--dur-entry) var(--ease-out),
+    transform var(--dur-entry) var(--ease-out);
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ambient float — hero background icons */
+@keyframes float-drift {
+  0%,  100% { transform: translateY(0px)   rotate(0deg);   }
+  33%        { transform: translateY(-10px) rotate(1.5deg); }
+  66%        { transform: translateY(-5px)  rotate(-1deg);  }
+}
+.bg-cube  { animation: float-drift 8s  ease-in-out infinite; }
+.bg-arrow { animation: float-drift 11s ease-in-out infinite 2s; }
+
+/* Bento card lift — hover */
+.bento-card {
+  transition:
+    transform    var(--dur-micro) var(--ease-out),
+    box-shadow   var(--dur-micro) var(--ease-out),
+    border-color var(--dur-micro) var(--ease-out);
+  will-change: transform;
+}
+.bento-card:hover, .bento-card.active {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 40px var(--accent-glow);
+  border-color: var(--border-accent);
+}
+
+/* Button glow hover */
+.btn-primary {
+  transition:
+    transform  var(--dur-micro) var(--ease-out),
+    box-shadow var(--dur-micro) var(--ease-out);
+  will-change: transform;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 24px var(--accent-glow),
+    0 0 0 1px var(--border-accent);
+}
+.btn-primary:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Nav link underline slide */
+.nav-links a { position: relative; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 100%; height: 1.5px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-micro) var(--ease-out);
+}
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* Billing toggle pill */
+.toggle-pill {
+  position: absolute;
+  transition: transform var(--dur-micro) var(--ease-out);
+  will-change: transform;
+}
+
+/* Accordion */
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height var(--dur-layout) var(--ease-inout),
+    opacity    calc(var(--dur-layout) - 50ms) var(--ease-inout);
+}
+.accordion-body.open {
+  max-height: 300px;
+  opacity: 1;
+}
+
+/* Accordion trigger chevron rotation */
+.accordion-trigger .chevron-icon {
+  transition: transform 200ms var(--ease-out);
+}
+.accordion-item.open .accordion-trigger .chevron-icon {
+  transform: rotate(180deg);
+}
+
+/* Pricing card highlight pulse — Pro tier */
+@keyframes border-glow {
+  0%,  100% { box-shadow: 0 0 16px var(--accent-glow); }
+  50%        { box-shadow: 0 0 32px var(--accent-glow), 0 0 48px var(--accent-glow-warm); }
+}
+.pricing-card.highlighted {
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+/* Page entry */
+@keyframes page-enter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+#root {
+  animation: page-enter 200ms ease-out forwards;
+}
+
+/* Theme toggle animation */
+.theme-toggle .toggle-thumb {
+  transition: transform 200ms var(--ease-out);
+}
+.theme-toggle[data-theme="dark"] .toggle-thumb {
+  transform: translateX(0);
+}
+.theme-toggle[data-theme="light"] .toggle-thumb {
+  transform: translateX(20px);
+}
+
+/* Hamburger animation */
+.hamburger-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.hamburger-bars span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: all 200ms var(--ease-out);
+}
+
+/* Mobile nav slide */
+@keyframes slide-in {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+.mobile-nav.open {
+  animation: slide-in 300ms var(--ease-out) forwards;
+}
+
+/* Header scroll effect */
+.site-header {
+  transition: background-color 280ms ease-in-out, backdrop-filter 280ms ease-in-out;
+}
+.site-header.scrolled {
+  background-color: rgba(23, 43, 54, 0.85);
+  backdrop-filter: blur(12px);
+}
+:root[data-theme="light"] .site-header.scrolled {
+  background-color: rgba(241, 246, 244, 0.85);
+}
