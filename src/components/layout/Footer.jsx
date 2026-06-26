@@ -20,7 +20,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://docs.axon.ai"
+                href="https://github.com/subbu666/axon-ai/blob/main/README.md"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -36,11 +36,13 @@ export default function Footer() {
               <a href="#about">About</a>
             </li>
             <li>
-              <a href="#blog">Blog</a>
+              <a href="https://github.com/subbu666/axon-ai/blob/main/README.md">
+                Blog
+              </a>
             </li>
             <li>
               <a
-                href="https://github.com"
+                href="https://github.com/subbu666/axon-ai"
                 target="_blank"
                 rel="noopener noreferrer"
               >

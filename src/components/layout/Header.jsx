@@ -68,13 +68,19 @@ export default function Header() {
                 <a href="#pricing">Pricing</a>
               </li>
               <li>
-                <a href="https://github.com/subbu666/axon-ai/blob/main/README.md">
+                <a
+                  href="https://github.com/subbu666/axon-ai/blob/main/README.md"
+                  target="_blank"
+                >
                   <LinkSolidIcon size={16} aria-label="" className="nav-icon" />
                   Docs
                 </a>
               </li>
               <li>
-                <a href="https://github.com/subbu666/axon-ai/blob/main/README.md">
+                <a
+                  href="https://github.com/subbu666/axon-ai/blob/main/README.md"
+                  target="_blank"
+                >
                   Blog
                 </a>
               </li>
